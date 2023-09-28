@@ -1,0 +1,7 @@
+{
+    "DBServer": "localhost",
+    "DBName": "saran",
+    "DBPassword": "fubu",
+    "DBSchema": "chatapp",
+    "root_path": "/"
+}
