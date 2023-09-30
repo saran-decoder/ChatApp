@@ -1,0 +1,38 @@
+.login-container {
+    background: var(--text-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    top: 10rem;
+    position: relative;
+    width: 18rem;
+}
+
+.form-data {
+    border: none;
+    box-shadow: 0 0 2px 0.8px var(--body-color);
+    background: var(--body-color);
+    color: var(--text-color);
+}
+
+.form-title {
+    position: relative;
+    top: -8px;
+    letter-spacing: 4px;
+    font-size: 23px;
+    -webkit-text-stroke-width: medium;
+}
+
+.form-submit {
+    border: none;
+    background: darkcyan;
+    color: var(--bs-white);
+}
+
+.form-btn-align {
+    top: 1vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+}
