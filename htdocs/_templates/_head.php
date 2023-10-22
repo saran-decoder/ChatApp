@@ -5,6 +5,7 @@
 
     <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="../css/temp_discuss.css">
     <link rel="stylesheet" href="../css/discuss.css">
     <link rel="stylesheet" href="../css/reglog.css">
 </head>

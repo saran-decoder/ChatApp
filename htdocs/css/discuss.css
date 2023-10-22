@@ -24,7 +24,9 @@
     --text-color: #000;
     --timer-color: #999;
     --more-color: #e9ecef;
-    --bs-dark: #e9ecef;;
+    --bs-dark: #e9ecef;
+    --bg-chat-color: #f8f9fa;
+    --chat-color: #212529;
 
     /* Transition */
     --tran-03: all 0.2s ease;
@@ -41,6 +43,8 @@ body.dark{
     --timer-color: #999;
     --more-color: #999;
     --bs-dark: #212529;
+    --bg-chat-color: #1a1d21;
+    --chat-color: #a7a6a8;
 }
 
 body{
@@ -240,10 +244,6 @@ button.btn.p-0.list-inline-item {
     color: var(--text-color);
 }
 
-.d-flex.flex-column.position-relative {
-    margin-top: 3rem !important;
-}
-
 button.btn.p-0.list-inline-item.ms-1 {
     border: none;
 }
@@ -331,10 +331,6 @@ button.btn.p-0.list-inline-item.ms-1 {
     .rs-navbar {
         background: var(--body-color);
         box-shadow: 0 0 1px var(--box-border-color);
-    }
-
-    .d-flex.flex-column.position-relative {
-        margin-top: 2.4rem !important;
     }
 
     li.nav-link.d-none.align-items-center.profile.position-fixed.me-0 {
@@ -461,7 +457,7 @@ button.btn.p-0.list-inline-item.ms-1 {
 /* Started Full Web Scrollbar Styles CSS */
 /* width */
 ::-webkit-scrollbar {
-    width: auto;
+    width: 0;
 }
 
 /* Track */
@@ -519,7 +515,6 @@ button.btn.p-0.list-inline-item.ms-1 {
 
 /* start: Content side */
 .content-sidebar {
-    width: 280px;
     background-color: var(--body-color);
     box-shadow: 0 0 1px var(--box-border-color);
     display: flex;
@@ -527,14 +522,13 @@ button.btn.p-0.list-inline-item.ms-1 {
     height: 100%;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
 }
 .content-sidebar-title {
     font-size: 20px;
     font-weight: 600;
     padding: 16px;
     color: var(--box-border-color);
-    display: flex;
     align-items: center;
 }
 .content-messages {
@@ -604,7 +598,7 @@ span.text.edit-title-name {
     border-radius: 4rem;
     object-fit: cover;
     flex-shrink: 0;
-    margin-right: 12px;
+    margin-right: 16px;
 }
 .content-message-info {
     display: grid;
@@ -622,7 +616,7 @@ span.text.edit-title-name {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 8rem;
+    width: 10rem;
 }
 .content-message-text {
     font-size: 13px;
