@@ -1,6 +1,6 @@
 <?php
 
-require_once 'libs/load.php';
+require_once 'libs/start.php';
 
 $api = new API();
 try {

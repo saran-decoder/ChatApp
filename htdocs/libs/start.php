@@ -8,6 +8,7 @@ include_once 'includes/User.class.php';
 include_once 'includes/UserSession.class.php';
 include_once 'includes/API.class.php';
 include_once 'includes/REST.class.php';
+include_once 'chat/discuss.class.php';
 
 $WebAPI = new WebAPI();
 $WebAPI->initiateSession();

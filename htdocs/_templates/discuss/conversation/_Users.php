@@ -4,7 +4,7 @@
         <div class="d-flex flex-column h-100 position-fixed m-0">
 
             <!-- Chat: Header -->
-            <div class="chat-header border-bottom py-2">
+            <div class="chat-header border-bottom py-3">
                 <div class="d-flex align-items-center justify-content-between">
 
                     <!-- Content -->
@@ -12,7 +12,7 @@
                         <div class="d-flex align-items-center">
                             <!-- Title -->
                             <!-- Close: btn -->
-                            <a class="ps-2 pb-1 icon-lg text" href="test.php" data-toggle-chat="">
+                            <a class="ps-2 pb-1 icon-lg text" href="/" data-toggle-chat="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
                             </a>
                             <!-- Close: btn -->
@@ -76,6 +76,7 @@
                 <div class="chat-body-inner">
                     <div class="my-8 pb-lg-12">
 
+                        <ul id="getmsg"></ul>
                         <!-- Message -->
                         <div class="message">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal-user-profile" class="avatar avatar-responsive">
@@ -130,50 +131,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="message-content">
-                                        <div class="message-text">
-                                            <p class="mb-0">Send me the files please.</p>
-                                        </div>
-
-                                        <!-- Dropdown -->
-                                        <div class="message-action">
-                                            <div class="dropdown">
-                                                <a class="icon text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
-                                                </a>
-
-                                                <ul class="dropdown-menu">
-                                                    <li>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <span class="me-auto">Edit</span>
-                                                            <div class="icon">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item d-flex align-items-center" href="#">
-                                                            <span class="me-auto">Reply</span>
-                                                            <div class="icon">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-left"><polyline points="9 14 4 9 9 4"></polyline><path d="M20 20v-7a4 4 0 0 0-4-4H4"></path></svg>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <hr class="dropdown-divider">
-                                                    </li>
-                                                    <li>
-                                                    <a class="dropdown-item d-flex align-items-center text-danger" href="#">
-                                                        <span class="me-auto">Delete</span>
-                                                        <div class="icon">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                    
                             </div>
 
                             <div class="message-footer">
@@ -184,130 +142,15 @@
 
 
                     <!-- Message -->
-                    <div class="message message-out">
-
-                        <div class="message-inner">
-                            <div class="message-body">
-                                <div class="message-content">
-                                    <div class="message-text">
-                                        <blockquote class="blockquote overflow-hidden">
-                                            <h6 class="text-reset text-truncate mb-0">William Wright</h6>
-                                            <p class="small text-truncate">Hey, Marshall! How are you? Can you please change the color theme of the website to pink and purple?</p>
-                                        </blockquote>
-                                        <p class="mb-0">Hey, Marshall! How are you? Can you please change the color theme of the website to pink and purple?</p>
-                                    </div>
-
-                                    <!-- Dropdown -->
-                                    <div class="message-action">
-                                        <div class="dropdown">
-                                            <a class="icon text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
-                                            </a>
-
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                        <span class="me-auto">Edit</span>
-                                                        <div class="icon">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                        <span class="me-auto">Reply</span>
-                                                        <div class="icon">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-left"><polyline points="9 14 4 9 9 4"></polyline><path d="M20 20v-7a4 4 0 0 0-4-4H4"></path></svg>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <hr class="dropdown-divider">
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item d-flex align-items-center text-danger" href="#">
-                                                        <span class="me-auto">Delete</span>
-                                                        <div class="icon">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="message-footer">
-                                <span class="extra-small text-muted">08:45 PM</span>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     <!-- Divider -->
                     <div class="message-divider">
                         <small class="text-muted">Monday, Sep 16</small>
                     </div>
 
-                    <!-- Message -->
-                    <div class="message">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-user-profile" class="avatar avatar-responsive">
-                            <img class="avatar-img" src="../assets/images/default/profile-3.jpg" alt="">
-                        </a>
-
-                        <div class="message-inner">
-                            <div class="message-body">
-                                <div class="message-content">
-                                    <div class="message-text">
-                                        <p class="mb-0">Hey, Marshall! How are you? Can you please change the color theme of the website to pink and purple?</p>
-                                    </div>
-
-                                    <!-- Dropdown -->
-                                    <div class="message-action">
-                                        <div class="dropdown">
-                                            <a class="icon text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
-                                            </a>
-
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                        <span class="me-auto">Edit</span>
-                                                        <div class="icon">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                                        <span class="me-auto">Reply</span>
-                                                        <div class="icon">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-left"><polyline points="9 14 4 9 9 4"></polyline><path d="M20 20v-7a4 4 0 0 0-4-4H4"></path></svg>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <hr class="dropdown-divider">
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item d-flex align-items-center text-danger" href="#">
-                                                        <span class="me-auto">Delete</span>
-                                                        <div class="icon">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="message-footer">
-                                <span class="extra-small text-muted">08:45 PM</span>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    
 
                     <!-- Message -->
                     <div class="message message-out">
@@ -367,22 +210,8 @@
                     </div>
 
 
-                    <!-- Message -->
-                    <div class="message">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-user-profile" class="avatar avatar-responsive">
-                            <img class="avatar-img" src="../assets/images/default/avatar.jpg" alt="">
-                        </a>
-
-                        <div class="message-inner">
-                            <div class="message-body">
-                                <div class="message-content">
-                                    <div class="message-text">
-                                        <p class="mb-0">William is typing<span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    
 
                 </div>
             </div>
@@ -395,8 +224,13 @@
             <div class="dz-preview bg-dark" id="dz-preview-row" data-horizontal-scroll=""></div>
             <!-- Chat: Files -->
 
+            <!-- < ?php if (isset($_POST['message'])) {
+                $message =  $_POST['message'];
+                Discuss::sendMessage($message);
+            }
+            ?> -->
             <!-- Chat: Form -->
-            <form class="chat-form rounded-pill bg-dark" data-emoji-form="">
+            <form class="chat-form rounded-pill bg-dark" action="">
                 <div class="row align-items-center gx-0">
                     <div class="col-auto">
                         <a href="#" class="btn btn-icon btn-link text-body rounded-circle" id="dz-btn">
@@ -406,7 +240,7 @@
 
                     <div class="col">
                         <div class="input-group">
-                            <textarea class="form-control px-0" placeholder="Type your message..." rows="1" data-emoji-input="" style="resize: none;" data-autosize="true"></textarea>
+                            <textarea class="form-control px-0" id="message" name="message" placeholder="Type your message..." rows="1" data-emoji-input="" style="resize: none;" data-autosize="true"></textarea>
 
                             <a href="#" class="input-group-text text-body p-0" data-emoji-btn="">
                                 <span class="icons icon-lg">
@@ -417,7 +251,7 @@
                     </div>
 
                     <div class="col-auto">
-                        <button class="btn btn-icon btn-primary rounded-circle ms-3">
+                        <button type="button" class="btn btn-icon btn-primary rounded-circle ms-3 send-msg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                         </button>
                     </div>
@@ -428,4 +262,56 @@
         <!-- Chat: Footer -->
     </div>
 
+</div>
 </main>
+
+<<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(".send-msg").click(function(){
+        var msg = $("#message").val();
+        $.post('/api/discuss/setchat', {
+            message: msg
+        }, function(data) {
+            console.log(data);
+            $('#message').val("");
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.log('AJAX Error: ' + textStatus, errorThrown);
+        });
+    });
+});
+
+
+let lastMessageId = 0; // Initialize with 0 for the first request
+
+function loadNewMessages() {
+    $.ajax({
+        type: 'GET',
+        url: '/api/discuss/getchat',
+        data: { last_message_id: lastMessageId },
+        dataType: 'json',
+        success: function (data) {
+            if (data && data.Status === 'Messages Retrieved Successfully') {
+                const messages = data.messages;
+                if (messages.length > 0) {
+                    lastMessageId = messages[0].id; // Update lastMessageId with the latest message ID
+                    // Append new messages to the chat interface
+                    $.each(messages, function (index, message) {
+                        $('#getmsg').append('<div>' + message.message + '</div>');
+                    });
+                }
+            } else if (data && data.message === 'No new messages') {
+                console.log('No new messages');
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log('AJAX Error: ' + textStatus, errorThrown);
+        }
+    });
+}
+
+// Load new messages initially
+loadNewMessages();
+setInterval(loadNewMessages, 1000); // Refresh every 5 seconds
+
+</script>

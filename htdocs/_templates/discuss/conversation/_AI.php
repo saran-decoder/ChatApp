@@ -27,8 +27,8 @@
                                     </div>
 
                                     <div class="col overflow-hidden">
-                                        <h5 class="text-truncate">Bootstrap Community</h5>
-                                        <p class="text-truncate mb-0">35 members, 3 online</p>
+                                        <h5 class="text-truncate">Discussion AI</h5>
+                                        <p class="text-truncate mb-0">Welcome Usernamer</p>
                                     </div>
                                 </div>
                             </div>
