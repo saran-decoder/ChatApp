@@ -45,3 +45,65 @@ document.querySelectorAll('.conversation-back').forEach(function(item) {
     });
 });
 // end: Coversation
+
+
+
+
+
+
+var scrollDown = function(){
+    let chatBox = document.getElementById('chatBox');
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+scrollDown();
+
+$(document).ready(function() {
+    $(".send-msg").click(function(){
+        var msg = $("#message").val();
+        $.post('/api/discuss/setchat', {
+            message: msg
+        }, function(data) {
+            console.log(data);
+            $('#message').val("");
+            $("#chatBox").append(data);
+            scrollDown();
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.log('AJAX Error: ' + textStatus, errorThrown, jqXHR);
+        });
+    });
+});
+
+
+
+
+let lastMessageId = 0; // Initialize with 0 for the first request
+
+function loadNewMessages() {
+    $.ajax({
+        type: 'GET',
+        url: '/api/discuss/getchat',
+        success: function (data) {
+            if (data && data.Status === 'Messages Retrieved Successfully') {
+                const messages = data.messages;
+                if (messages.length > 0) {
+                    lastMessageId = messages[0].id; // Update lastMessageId with the latest message ID
+                    // Append new messages to the chat interface
+                    $.each(messages, function (index, message) {
+                        $('#getmsg').append(message.message);
+                        scrollDown();
+                    });
+                }
+            } else if (data && data.message === 'No new messages') {
+                console.log('No new messages');
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log('AJAX Error: ' + textStatus, errorThrown, jqXHR);
+        }
+    });
+}
+
+// Load new messages initially
+loadNewMessages();
+setInterval(loadNewMessages, 1000); // Refresh every 5 seconds

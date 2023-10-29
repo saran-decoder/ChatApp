@@ -1,8 +1,7 @@
 <?php
 
 ${basename(__FILE__, '.php')} = function () {
-    $lastMessageId = isset($_GET['last_message_id']) ? $_GET['last_message_id'] : 0;
-    $messages = Discuss::getMessages($lastMessageId);
+    $messages = Discuss::getMessages();
     if ($messages) {
         $this->response($this->json([
             'Status' => 'Messages Retrieved Successfully',

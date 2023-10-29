@@ -8,6 +8,8 @@ ErrorDocument 500 "<H1>Some error, contact administrator</H1>"
 RewriteEngine On
 RewriteBase /
 
+RewriteRule ^/?avatar/([^/]+)?$ avatar.php?name=$1 [L,QSA,NC]
+
 RewriteRule ^/?api/([^/]+)?$ api.php?rquest=$1 [L,QSA,NC]
 RewriteRule ^/?api/([^/]+)/(.+)?$ api.php?rquest=$2&namespace=$1 [L,QSA,NC]
 

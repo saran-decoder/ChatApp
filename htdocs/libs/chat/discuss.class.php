@@ -10,7 +10,8 @@ class Discuss
     {
         $conn = Database::getConnection();
         $userid = Session::getUser()->getID();
-        $insertQuery = "INSERT INTO `discuss_msg` (`discuss_id`, `sender_id`, `message`, `timestamp`, `status`, `chat_block`) VALUES (1, '$userid', '$message', now(), 1, 0)";
+        $user = Session::getUser()->getUsername();
+        $insertQuery = "INSERT INTO `discuss_msg` (`discuss_id`, `sender_id`, `message`, `timestamp`, `status`, `chat_block`, `msg_user`) VALUES (1, '$userid', '$message', now(), 0, 0, '$user')";
         try
         {
             return $conn->query($insertQuery);
@@ -21,14 +22,37 @@ class Discuss
         }
     }
 
-    public static function getMessages($lastMessageId) {
+    public static function getMessages()
+    {
         $conn = Database::getConnection();
-        $sql = "SELECT * FROM `discuss_msg` WHERE `id` > '$lastMessageId' ORDER BY `timestamp` DESC";
+        $MessageId = Session::getUser()->getID();
+        $sql = "SELECT * FROM `discuss_msg` WHERE `id` = '$MessageId' ORDER BY `timestamp` DESC";
         $result = $conn->query($sql);
         $message = [];
-        while ($row = $result->fetch_assoc()) {
-            $message[] = $row;
-        }
+        $row = $result->fetch_assoc();
+        $message[] = $row;
+        // die(var_dump($message));
         return $message;
+        // return $message;
+        // while ($row = $result->fetch_assoc()) {
+        //     // $message[] = $row;
+        //     return $message;
+        // }
+    }
+
+    public static function getMsgInfo() {
+        $owner = Session::getUser()->getUsername();
+        $db = Database::getConnection();
+        $sql = "SELECT * FROM `discuss_msg` WHERE `msg_user` = '$owner'";
+        $result = $db->query($sql);
+        return $result->fetch_assoc();
+    }
+
+    public static function getUserInfo() {
+        $owner = Session::getUser()->getUsername();
+        $db = Database::getConnection();
+        $sql = "SELECT * FROM `users` WHERE `owner` = '$owner'";
+        $result = $db->query($sql);
+        return $result->fetch_assoc();
     }
 }
